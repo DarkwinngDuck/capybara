@@ -1,0 +1,15 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: './lib'
+    ports:
+      - '9229:9229'
+    command:
+      - /bin/sh
+      - -c
+      - |
+        npm run dev
+    volumes:
+      - ./lib:/usr/src/app/src
+    restart: unless-stopped
