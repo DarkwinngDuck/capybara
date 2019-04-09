@@ -11,5 +11,5 @@ services:
       - |
         npm run dev
     volumes:
-      - ./lib:/usr/src/app/src
+      - ./lib/src:/usr/src/app/src/
     restart: unless-stopped
